@@ -86,7 +86,12 @@ with tab2:
         peaks = data["peaks"]
         show(alt.Chart(peaks).mark_bar().encode(
             x=alt.X("date:T", title=None), y=alt.Y("actual:Q", title="Peak-hour kWh"),
-            tooltip=["peak_time", "actual", "predicted"]))
+            tooltip=[
+                alt.Tooltip("date:T", title="Date", format="%b %d, %Y"),
+                alt.Tooltip("peak_time:T", title="Peak time", format="%H:%M"),
+                alt.Tooltip("actual:Q", title="Actual peak load", format=",.1f"),
+                alt.Tooltip("predicted:Q", title="Predicted peak load", format=",.1f"),
+            ]))
         st.caption(f"Most common peak hour: {int(peaks['peak_hour'].mode().iloc[0])}:00")
     with right:
         st.subheader("Top buildings by estimated excess kWh")
