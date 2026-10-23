@@ -1,0 +1,32 @@
+{
+  "rows_in": 865725,
+  "invalid_readings_removed": 0,
+  "excluded_pair_rows_removed": 0,
+  "zero_streak_rows_removed": 18879,
+  "weather_missing_before": {
+    "air_temperature": 0.003665365367493027,
+    "cloud_coverage": 0.4511776639436214,
+    "dew_temperature": 0.0038613868401102445,
+    "precip_depth_1_hr": 0.2585405138596628,
+    "sea_level_pressure": 0.08030385689960158,
+    "wind_direction": 0.059217378366314535,
+    "wind_speed": 0.005366973452079835
+  },
+  "weather_missing_after": {
+    "air_temperature": 0.0,
+    "cloud_coverage": 0.0,
+    "dew_temperature": 0.0,
+    "precip_depth_1_hr": 0.0,
+    "sea_level_pressure": 0.0,
+    "wind_direction": 0.0,
+    "wind_speed": 0.0
+  },
+  "extreme_buildings_flagged": [
+    {
+      "building_id": 223,
+      "meter": 0,
+      "mean_reading": 2496.682373046875
+    }
+  ],
+  "rows_out": 846846
+}
