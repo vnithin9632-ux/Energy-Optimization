@@ -3,20 +3,6 @@
 Pipeline on the ASHRAE Great Energy Predictor III data: ingest -> clean -> features ->
 forecast -> analytics -> dashboard.
 
-## Quick start
-```bash
-pip install -r requirements.txt
-
-# 1. try it on fake data first (no download needed)
-python make_synthetic_data.py --out data_synth
-python run_pipeline.py --data-dir data_synth --out-dir outputs --n-buildings 0
-
-# 2. real data: put train.csv, building_metadata.csv, weather_train.csv in ./data
-python run_pipeline.py --data-dir data --n-buildings 100 --meters 0
-
-# 3. dashboard
-streamlit run app.py
-```
 Only `train.csv`, `building_metadata.csv` and `weather_train.csv` are needed. The Kaggle
 `test.csv` has no labels, so it cannot be used for evaluation.
 Start with a sample of buildings (`--n-buildings 100`); the full file has ~20 M rows.
