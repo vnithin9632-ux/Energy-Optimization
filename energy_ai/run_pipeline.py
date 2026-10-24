@@ -1,4 +1,3 @@
-"""Runs modules 1-5 end to end:  python run_pipeline.py --data-dir data"""
 import argparse
 import logging
 import time

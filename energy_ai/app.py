@@ -1,6 +1,3 @@
-"""Module 7 - Dashboard.   Run:  streamlit run app.py
-Reads the files written by run_pipeline.py (default folder: outputs/, override with
-the ENERGY_OUT environment variable)."""
 import json
 import os
 from pathlib import Path

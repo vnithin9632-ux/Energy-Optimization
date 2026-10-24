@@ -1,14 +1,3 @@
-"""Module 4 - AI/ML forecasting.
-
-Input : feature DataFrame from features.build_features()
-Output: predictions DataFrame (hold-out period only), metrics dict, saved model
-Method: HistGradientBoostingRegressor on log1p(meter_reading), time-based hold-out
-        (last TEST_FRACTION of the time range) so the model never sees the future.
-Baselines (evaluated on exactly the same rows):
-        - seasonal naive : same hour last week (lag_168h)
-        - hour-of-week profile : mean per building/meter/hour-of-week from the training period
-Fails : ValueError if the train or test period is empty.
-"""
 import json
 import logging
 from pathlib import Path

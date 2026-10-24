@@ -1,10 +1,3 @@
-"""Module 1 - Data ingestion.
-
-Input : train.csv, building_metadata.csv, weather_train.csv  (ASHRAE GEPIII files)
-Output: one merged pandas DataFrame, one row per (building, meter, hour)
-Fails : FileNotFoundError / ValueError with a readable message if a file or column
-        is missing, or if the selected subset is empty.
-"""
 import logging
 from pathlib import Path
 

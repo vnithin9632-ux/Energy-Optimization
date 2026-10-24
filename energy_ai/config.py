@@ -1,4 +1,3 @@
-"""Central settings for the pipeline. Change values here, not inside the modules."""
 from pathlib import Path
 
 # ---- paths -----------------------------------------------------------------

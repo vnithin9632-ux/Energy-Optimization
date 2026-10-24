@@ -1,9 +1,3 @@
-"""Module 3 - Feature engineering.
-
-Input : clean DataFrame from preprocess.clean()
-Output: DataFrame with model-ready columns (see feature_columns())
-Fails : KeyError if a required column is missing (validated up front).
-"""
 import logging
 
 import numpy as np

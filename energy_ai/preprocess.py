@@ -1,14 +1,3 @@
-"""Module 2 - Preprocessing (turns the EDA findings into rules).
-
-Input : merged DataFrame from ingest.load_raw()
-Output: (clean DataFrame, report dict)
-Rules : 1. drop NaN / negative readings
-        2. drop known outlier (building, meter) pairs (config.EXCLUDE_PAIRS, e.g. building 1099 steam)
-        3. drop long runs of zero readings on electricity (site 0 reads 0 until ~May 2016)
-        4. fill weather gaps: interpolate short gaps, then site median, then global median
-        5. *flag* (log only) any building whose mean reading is extreme
-Fails : never silently - every step records how many rows it touched in the report.
-"""
 import json
 import logging
 from pathlib import Path

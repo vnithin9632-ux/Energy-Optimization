@@ -1,13 +1,3 @@
-"""Module 5 - Energy analytics (anomalies, peaks, building summary).
-
-Input : predictions DataFrame from forecast.run_forecast()
-Output: anomalies, building summary and daily-peak tables (also saved as csv)
-Method: residual = log1p(actual) - log1p(predicted) per building/meter. A reading is an
-        anomaly if its robust z-score (median/MAD) exceeds ANOMALY_Z *and* the residual is
-        at least ANOMALY_MIN_LOG_DEV. Positive residual = consumption higher than expected
-        (possible wastage); negative = lower than expected (possible outage / sensor fault).
-Fails : returns empty tables (not an error) if there is nothing to analyse.
-"""
 import logging
 from pathlib import Path
 
